@@ -1,0 +1,14 @@
+apiVersion: secrets.ohnozombi.es/v1alpha1
+kind: TradeSecret
+metadata:
+  name: trade-a-for-b
+spec:
+  source: secret-b
+  destination: secret-a
+  strategy:
+    type: copy
+    items:
+      - source: value2
+        destination: value2
+      - source: value3
+        destination: value1
